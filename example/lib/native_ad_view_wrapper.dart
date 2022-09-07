@@ -11,6 +11,7 @@ class NativeAdViewWrapper extends StatefulWidget {
 
 class NativeAdViewWrapperState extends State<NativeAdViewWrapper>
     with AutomaticKeepAliveClientMixin {
+  @override
   bool get wantKeepAlive => true;
   NativeAdViewController _controller;
 
@@ -18,26 +19,26 @@ class NativeAdViewWrapperState extends State<NativeAdViewWrapper>
   Widget build(BuildContext context) {
     super.build(context);
     return NativeAdView(
-      onParentViewCreated: (controller) {
+      onParentViewCreated: (NativeAdViewController controller) {
         _controller = controller;
       },
       androidParam: AndroidParam()
-        ..placementId = "ca-app-pub-3940256099942544/2247696110" // test
-        ..packageName = "sakebook.github.com.native_ads_example"
-        ..layoutName = "native_ad_layout"
-        ..attributionText = "AD"
-        ..testDevices = ["00000000000000000000000000000000"],
+        ..placementId = 'ca-app-pub-3940256099942544/2247696110' // test
+        ..packageName = 'sakebook.github.com.native_ads_example'
+        ..layoutName = 'native_ad_layout'
+        ..attributionText = 'AD'
+        ..testDevices = ['00000000000000000000000000000000'],
       iosParam: IOSParam()
-        ..placementId = "ca-app-pub-3940256099942544/3986624511" // test
-        ..bundleId = "sakebook.github.com.nativeAdsExample"
-        ..layoutName = "UnifiedNativeAdView"
-        ..attributionText = "SPONSORED"
-        ..testDevices = ["00000000000000000000000000000000"],
-      onAdImpression: () => print("onAdImpression!!!"),
-      onAdClicked: () => print("onAdClicked!!!"),
+        ..placementId = 'ca-app-pub-3940256099942544/3986624511' // test
+        ..bundleId = 'sakebook.github.com.nativeAdsExample'
+        ..layoutName = 'UnifiedNativeAdView'
+        ..attributionText = 'SPONSORED'
+        ..testDevices = ['00000000000000000000000000000000'],
+      onAdImpression: () => print('onAdImpression!!!'),
+      onAdClicked: () => print('onAdClicked!!!'),
       onAdFailedToLoad: (Map<String, dynamic> error) =>
-          print("onAdFailedToLoad!!! $error"),
-      onAdLoaded: () => print("onAdLoaded!!!"),
+          print('onAdFailedToLoad!!! $error'),
+      onAdLoaded: () => print('onAdLoaded!!!'),
     );
   }
 }

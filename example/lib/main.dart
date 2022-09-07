@@ -21,12 +21,12 @@ class MyApp extends StatelessWidget {
           child: ListView.separated(
             itemBuilder: (BuildContext context, int index) {
               if (index % 10 == 0) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
+                return const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: SizedBox(
                     width: double.infinity,
                     height: 400,
-                    child: const NativeAdViewWrapper(),
+                    child: NativeAdViewWrapper(),
                   ),
                 );
               } else {
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     'this is text $index',
-                    style: Theme.of(context).textTheme.body1,
+                    style: Theme.of(context).textTheme.bodyText2,
                   ),
                 );
               }
