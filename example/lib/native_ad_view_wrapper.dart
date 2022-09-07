@@ -13,7 +13,7 @@ class NativeAdViewWrapperState extends State<NativeAdViewWrapper>
     with AutomaticKeepAliveClientMixin {
   @override
   bool get wantKeepAlive => true;
-  NativeAdViewController _controller;
+  NativeAdViewController? _controller;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +39,7 @@ class NativeAdViewWrapperState extends State<NativeAdViewWrapper>
       onAdFailedToLoad: (Map<String, dynamic> error) =>
           print('onAdFailedToLoad!!! $error'),
       onAdLoaded: () => print('onAdLoaded!!!'),
+      onAdLeftApplication: () {},
     );
   }
 }

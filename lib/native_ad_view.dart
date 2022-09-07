@@ -12,15 +12,15 @@ typedef NativeAdViewCreatedCallback = void Function(
 class NativeAdView extends StatefulWidget {
   /// Create a NativeAdView
   const NativeAdView({
-    Key key,
-    this.onParentViewCreated,
-    this.androidParam,
-    this.iosParam,
-    this.onAdImpression,
-    this.onAdLeftApplication,
-    this.onAdClicked,
-    this.onAdFailedToLoad,
-    this.onAdLoaded,
+     Key? key,
+    required this.onParentViewCreated,
+    required this.androidParam,
+    required this.iosParam,
+    required this.onAdImpression,
+    required this.onAdLeftApplication,
+    required this.onAdClicked,
+    required this.onAdFailedToLoad,
+    required this.onAdLoaded,
   }) : super(key: key);
 
   /// Called when PlatformView created.

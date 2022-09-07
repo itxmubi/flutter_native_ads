@@ -1,19 +1,19 @@
 /// Android parameter for ad.
 class AndroidParam {
   /// AdMob placement id.
-  String placementId;
+  String? placementId;
 
   /// Android package name of plugin used app.
-  String packageName;
+  String? packageName;
 
   /// XML file name that your custom layout for native ad.
-  String layoutName;
+  String? layoutName;
 
   /// Ad Attribution text.
-  String attributionText;
+  String? attributionText;
 
   /// Test device ids.
-  List<String> testDevices;
+  List<String>? testDevices;
 
   /// Converts this param to a Map
   dynamic toMap() {
@@ -30,19 +30,19 @@ class AndroidParam {
 /// iOS parameter for ad.
 class IOSParam {
   /// AdMob placement id.
-  String placementId;
+  String? placementId;
 
   /// iOD bundle id of plugin used app.
-  String bundleId;
+  String? bundleId;
 
   /// XIB file name that your custom layout for native ad.
-  String layoutName;
+  String? layoutName;
 
   /// Ad Attribution text.
-  String attributionText;
+  String? attributionText;
 
   /// Test device ids.
-  List<String> testDevices;
+  List<String>? testDevices;
 
   /// Converts this param to a Map
   dynamic toMap() {

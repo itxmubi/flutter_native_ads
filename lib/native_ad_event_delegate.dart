@@ -4,11 +4,11 @@ import 'package:flutter/services.dart';
 class NativeAdEventDelegate {
   /// Create a NativeAdEventDelegate
   const NativeAdEventDelegate({
-    this.onAdImpression,
-    this.onAdLeftApplication,
-    this.onAdClicked,
-    this.onAdFailedToLoad,
-    this.onAdLoaded,
+    required this.onAdImpression,
+    required this.onAdLeftApplication,
+    required this.onAdClicked,
+    required this.onAdFailedToLoad,
+    required this.onAdLoaded,
   });
 
   /// Called when an impression is recorded for an ad.
